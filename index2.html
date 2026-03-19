@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO META TAGS -->
+  <title>Studio di Geologia e Geotecnica – Dr. Geol. Franco La Tessa | Torremaggiore (FG)</title>
+  <meta name="description" content="Studio geologico e geotecnico a Torremaggiore (Foggia). Indagini geognostiche, geofisiche, sismiche. Dr. Geol. Baldassarre Franco La Tessa. Attivo dal 1999.">
+  <meta name="keywords" content="studio geologico Torremaggiore, geologo Foggia, geotecnica Puglia, indagini geofisiche Torremaggiore, geologo Torremaggiore, geologia Foggia, La Tessa geologo, indagini sismiche Puglia, MASW, CPT, georadar Foggia">
+  <meta name="author" content="Dr. Geol. Baldassarre Franco La Tessa">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.studiolatessa.it/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Studio di Geologia e Geotecnica – Dr. Geol. Franco La Tessa">
+  <meta property="og:description" content="Indagini geologiche, geotecniche e geofisiche in Puglia. Esperienza dal 1999.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+
+  <!-- Schema.org strutturato per Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Studio di Geologia e Geotecnica – Dr. Geol. Franco La Tessa",
+    "description": "Studio geologico e geotecnico attivo dal 1999 a Torremaggiore (FG). Indagini geognostiche, geofisiche e sismiche.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Marsala, 113",
+      "addressLocality": "Torremaggiore",
+      "addressRegion": "FG",
+      "addressCountry": "IT"
+    },
+    "telephone": "+390882420368",
+    "email": "francolatessa@hotmail.com",
+    "url": "https://www.studiolatessa.it",
+    "founder": {
+      "@type": "Person",
+      "name": "Baldassarre Franco La Tessa",
+      "jobTitle": "Dottore Geologo"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --stone: #1a1714;
+      --earth: #3d2f1f;
+      --clay: #8c6d4f;
+      --sand: #c9a97a;
+      --cream: #f2ead8;
+      --light: #faf7f0;
+      --accent: #b85c2a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Mono', monospace;
+      background: var(--light);
+      color: var(--stone);
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: relative;
+      background: var(--stone);
+      color: var(--cream);
+      padding: 0;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .header-texture {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 80%, rgba(140,109,79,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(184,92,42,0.1) 0%, transparent 50%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      background-size: cover;
+    }
+
+    .header-strata {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 200px;
+      background: linear-gradient(to top,
+        rgba(61,47,31,0.6) 0%,
+        rgba(140,109,79,0.2) 40%,
+        transparent 100%);
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+      padding: 80px 60px;
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 300;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.2s;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--cream);
+      margin-bottom: 8px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.4s;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--sand);
+    }
+
+    .subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+      font-weight: 300;
+      color: var(--clay);
+      margin-bottom: 48px;
+      letter-spacing: 0.05em;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.6s;
+    }
+
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.8s;
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .meta-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--clay);
+    }
+
+    .meta-value {
+      font-size: 0.85rem;
+      color: var(--sand);
+    }
+
+    .meta-value a {
+      color: var(--sand);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,169,122,0.3);
+      transition: border-color 0.2s;
+    }
+
+    .meta-value a:hover { border-color: var(--sand); }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 40px;
+      left: 60px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--clay);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 1.2s;
+    }
+
+    .scroll-line {
+      width: 40px;
+      height: 1px;
+      background: var(--clay);
+      animation: growLine 1.5s ease-in-out infinite;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--stone);
+      border-bottom: 1px solid rgba(140,109,79,0.2);
+      padding: 0 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: var(--sand);
+      letter-spacing: 0.1em;
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--clay);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--sand); }
+
+    /* ── SECTIONS ── */
+    section {
+      padding: 100px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      max-width: 60px;
+      height: 1px;
+      background: var(--clay);
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      color: var(--earth);
+      margin-bottom: 48px;
+      line-height: 1.15;
+    }
+
+    h2 em { font-style: italic; color: var(--accent); }
+
+    /* ── SERVIZI GRID ── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+      background: var(--cream);
+      border: 1px solid var(--cream);
+    }
+
+    .service-card {
+      background: var(--light);
+      padding: 40px 32px;
+      transition: background 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 0;
+      background: var(--accent);
+      transition: height 0.4s ease;
+    }
+
+    .service-card:hover { background: #fff; }
+    .service-card:hover::before { height: 100%; }
+
+    .service-num {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: var(--clay);
+      margin-bottom: 16px;
+    }
+
+    .service-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--earth);
+      margin-bottom: 12px;
+    }
+
+    .service-desc {
+      font-size: 0.75rem;
+      line-height: 1.8;
+      color: var(--clay);
+      font-weight: 300;
+    }
+
+    /* ── STRUMENTAZIONE ── */
+    .tools-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 8px;
+    }
+
+    .tool-item {
+      border-left: 2px solid var(--cream);
+      padding: 16px 20px;
+      transition: border-color 0.3s;
+    }
+
+    .tool-item:hover { border-color: var(--accent); }
+
+    .tool-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--earth);
+      margin-bottom: 4px;
+    }
+
+    .tool-detail {
+      font-size: 0.68rem;
+      color: var(--clay);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── DIVIDER ── */
+    .strata-divider {
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(to right,
+        var(--stone) 0%,
+        var(--earth) 20%,
+        var(--clay) 45%,
+        var(--sand) 70%,
+        var(--cream) 100%);
+      opacity: 0.4;
+    }
+
+    /* ── PDF SECTION ── */
+    #brochure {
+      background: var(--stone);
+      color: var(--cream);
+      max-width: 100%;
+      padding: 80px 60px;
+    }
+
+    #brochure .section-label { color: var(--clay); }
+    #brochure h2 { color: var(--cream); max-width: 1100px; margin-left: auto; margin-right: auto; }
+    #brochure h2 em { color: var(--sand); }
+
+    .pdf-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .pdf-container {
+      width: 100%;
+      height: 700px;
+      border: 1px solid rgba(140,109,79,0.3);
+      background: var(--earth);
+    }
+
+    .pdf-fallback {
+      display: none;
+      text-align: center;
+      padding: 60px 40px;
+      border: 1px solid rgba(140,109,79,0.3);
+    }
+
+    .pdf-fallback p {
+      font-size: 0.8rem;
+      color: var(--clay);
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn:hover { background: var(--clay); }
+
+    /* ── CONTATTI ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info p {
+      font-size: 0.8rem;
+      line-height: 2;
+      color: var(--clay);
+      margin-bottom: 32px;
+    }
+
+    .contact-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 20px;
+      align-items: baseline;
+      border-bottom: 1px solid var(--cream);
+      padding-bottom: 12px;
+    }
+
+    .contact-key {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--clay);
+      min-width: 80px;
+    }
+
+    .contact-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      color: var(--earth);
+    }
+
+    .contact-val a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .piva-box {
+      background: var(--cream);
+      padding: 24px 28px;
+      font-size: 0.68rem;
+      color: var(--clay);
+      line-height: 2;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--stone);
+      color: var(--clay);
+      padding: 40px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+    }
+
+    footer a { color: var(--clay); text-decoration: none; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes growLine {
+      0%, 100% { transform: scaleX(1); }
+      50% { transform: scaleX(1.5); transform-origin: left; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      header { min-height: auto; }
+      .header-content { padding: 60px 24px 80px; }
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      section { padding: 60px 24px; }
+      #brochure { padding: 60px 24px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .scroll-hint { left: 24px; }
+      footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+      .pdf-container { height: 400px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<header>
+  <div class="header-texture"></div>
+  <div class="header-strata"></div>
+  <div class="header-content">
+    <p class="eyebrow">Studio di Geologia e Geotecnica · Dal 1999</p>
+    <h1>Dr. Geol.<br><em>Franco La Tessa</em></h1>
+    <p class="subtitle">Indagini Geognostiche &amp; Geofisiche · Torremaggiore (FG)</p>
+    <div class="header-meta">
+      <div class="meta-item">
+        <span class="meta-label">Sede</span>
+        <span class="meta-value">Via Marsala, 113 — Torremaggiore (FG)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Telefono</span>
+        <span class="meta-value"><a href="tel:+390882420368">0882.420368</a> · <a href="tel:+393929775853">392.9775853</a></span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Email</span>
+        <span class="meta-value"><a href="mailto:francolatessa@hotmail.com">francolatessa@hotmail.com</a></span>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span class="scroll-line"></span>
+    Scopri i servizi
+  </div>
+</header>
+
+<!-- NAV STICKY -->
+<nav>
+  <span class="nav-brand">La Tessa · Geologia</span>
+  <ul class="nav-links">
+    <li><a href="#servizi">Servizi</a></li>
+    <li><a href="#strumentazione">Strumentazione</a></li>
+    <li><a href="#brochure">Brochure</a></li>
+    <li><a href="#contatti">Contatti</a></li>
+  </ul>
+</nav>
+
+<!-- CHI SIAMO -->
+<section id="chi-siamo">
+  <p class="section-label">Chi siamo</p>
+  <h2>Competenza geologica<br>al servizio del <em>territorio</em></h2>
+  <p style="max-width:640px; font-size:0.82rem; line-height:2; color:var(--clay);">
+    Lo studio del dr. Baldassarre Franco La Tessa svolge attività professionale nel campo della geologia dal <strong style="color:var(--earth)">1999</strong>, acquisendo negli anni esperienze e competenze in più ambiti professionali. Si occupa della ricerca e dello studio per la conoscenza del sottosuolo nelle sue condizioni statiche e dinamiche, nella definizione della modellazione geotecnica e sismica e nelle sue trasformazioni da ante a post operam.
+  </p>
+</section>
+
+<div class="strata-divider"></div>
+
+<!-- SERVIZI -->
+<section id="servizi" style="max-width:100%; padding-left:60px; padding-right:60px;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <p class="section-label">Ambiti professionali</p>
+    <h2>Consulenza &amp; <em>Studi Geologici</em></h2>
+  </div>
+  <div class="services-grid" style="max-width:1100px; margin:0 auto;">
+    <div class="service-card">
+      <p class="service-num">01</p>
+      <p class="service-title">Ingegneria Civile</p>
+      <p class="service-desc">Strade, viadotti e gallerie · Ferrovie, elettrodotti e acquedotti · Impianti di energia rinnovabile (eolico, agrofotovoltaico, idroelettrico) · Opere di stabilizzazione versanti</p>
+    </div>
+    <div class="service-card">
+      <p class="service-num">02</p>
+      <p class="service-title">Edilizia Pubblica &amp; Privata</p>
+      <p class="service-desc">Scuole, ospedali e opere pubbliche · Edifici privati · Verifiche sismiche delle strutture · Modellazione geotecnica e sismica</p>
+    </div>
+    <div class="service-card">
+      <p class="service-num">03</p>
+      <p class="service-title">Studi Ambientali</p>
+      <p class="service-desc">Studi di impatto ambientale · Pianificazione territoriale e urbanistica · Compatibilità idrogeologica e idraulica per le Autorità di Bacino</p>
+    </div>
+    <div class="service-card">
+      <p class="service-num">04</p>
+      <p class="service-title">Indagini Geofisiche</p>
+      <p class="service-desc">Down-Hole · Tomografia sismica · Profili MASW-Re.Mi. · Profili ESAC 2D · Misure Tromografiche HVSR · Risposta Sismica Locale 1D-2D · SSR</p>
+    </div>
+    <div class="service-card">
+      <p class="service-num">05</p>
+      <p class="service-title">Esplorazione del Sottosuolo</p>
+      <p class="service-desc">Prove penetrometriche statiche e dinamiche CPT-CPTU-DPSH · Campionamenti geoambientali · Analisi ed elaborazione dati con software certificati</p>
+    </div>
+    <div class="service-card">
+      <p class="service-num">06</p>
+      <p class="service-title">Georadar &amp; GPR</p>
+      <p class="service-desc">Indagini con elettromagnetometro e georadar a 3 frequenze · Localizzazione sottoservizi · Restituzione dati su DWG, Google Earth e GIS</p>
+    </div>
+  </div>
+</section>
+
+<div class="strata-divider"></div>
+
+<!-- STRUMENTAZIONE -->
+<section id="strumentazione">
+  <p class="section-label">Dotazione tecnica</p>
+  <h2>Strumentazione<br><em>professionale</em></h2>
+  <div class="tools-list">
+    <div class="tool-item">
+      <p class="tool-name">Penetrometro PAGANI TG63-200</p>
+      <p class="tool-detail">Prove CPT · CPTU · DPSH · Campionamenti geoambientali</p>
+    </div>
+    <div class="tool-item">
+      <p class="tool-name">Georadar Quantum/GPR</p>
+      <p class="tool-detail">3 frequenze · 3 antenne US RADAR (USA) · Tablet Rugged GETAC F-110</p>
+    </div>
+    <div class="tool-item">
+      <p class="tool-name">Sismografo PASI 24 canali</p>
+      <p class="tool-detail">Geofoni verticali/orizzontali 4.5 Hz e 10 Hz · 24 bit</p>
+    </div>
+    <div class="tool-item">
+      <p class="tool-name">Tromografo PASI 3GLD</p>
+      <p class="tool-detail">Triassiale digitale · Misure HVSR stazione singola</p>
+    </div>
+    <div class="tool-item">
+      <p class="tool-name">Radar Zond12-e</p>
+      <p class="tool-detail">Radsys Company · Computer rugged Panasonic CF-19 · GPS integrato</p>
+    </div>
+    <div class="tool-item">
+      <p class="tool-name">Software Certificati</p>
+      <p class="tool-detail">Geo&amp;Soft · WinMaswPro2023 · Aztec Informatica · Programgeo · QGIS · HEC-RAS · FEM</p>
+    </div>
+  </div>
+</section>
+
+<!-- PDF BROCHURE -->
+<div id="brochure" style="background:var(--stone);">
+  <div class="pdf-wrapper">
+    <p class="section-label" style="color:var(--clay);">Documentazione</p>
+    <h2 style="color:var(--cream); margin-bottom:32px;">Scarica la <em>Brochure</em></h2>
+    <object
+      class="pdf-container"
+      data="studio-di-geologia-geotecnica-la-tessa.pdf"
+      type="application/pdf"
+      id="pdfViewer">
+      <div class="pdf-fallback" style="display:block; background:var(--earth); color:var(--cream);">
+        <p>Il visualizzatore PDF non è disponibile nel tuo browser.</p>
+        <a class="btn" href="studio-di-geologia-geotecnica-la-tessa.pdf" download>↓ Scarica la Brochure PDF</a>
+      </div>
+    </object>
+    <div style="margin-top:20px; text-align:right;">
+      <a class="btn" href="studio-di-geologia-geotecnica-la-tessa.pdf" download>↓ Scarica PDF</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTATTI -->
+<section id="contatti">
+  <p class="section-label">Dove trovarci</p>
+  <h2>Contatti &amp; <em>Riferimenti</em></h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p>Lo studio riceve su appuntamento. Per richieste di preventivo, consulenze o informazioni, non esitate a contattarci via telefono o email.</p>
+      <div class="contact-detail">
+        <div class="contact-row">
+          <span class="contact-key">Indirizzo</span>
+          <span class="contact-val">Via Marsala, 113 — Torremaggiore (FG)</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-key">Telefono</span>
+          <span class="contact-val"><a href="tel:+390882420368">0882.420368</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-key">Mobile</span>
+          <span class="contact-val"><a href="tel:+393929775853">392.9775853</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-key">Email</span>
+          <span class="contact-val"><a href="mailto:francolatessa@hotmail.com">francolatessa@hotmail.com</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-key">PEC</span>
+          <span class="contact-val"><a href="mailto:geollatessa@pec.epap.it">geollatessa@pec.epap.it</a></span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="piva-box">
+        <strong style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--earth);">Dr. Geol. Baldassarre Franco La Tessa</strong><br><br>
+        P.IVA 03018770713<br>
+        C.F. LTSBDS68A23F537C<br><br>
+        Iscritto all'Ordine dei Geologi della Puglia<br>
+        Attività professionale dal 1999
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2025 Dr. Geol. Baldassarre Franco La Tessa — Torremaggiore (FG)</span>
+  <span>P.IVA 03018770713 · <a href="mailto:francolatessa@hotmail.com">francolatessa@hotmail.com</a></span>
+</footer>
+
+</body>
+</html>
