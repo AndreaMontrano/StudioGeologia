@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO META TAGS -->
   <title>Studio di Geologia e Geotecnica – Dr.ssa geologa Giuseppina Antonucci | Torremaggiore (FG)</title>
   <meta name="description" content="Studio geologico e geotecnico a Torremaggiore (Foggia). Indagini geognostiche, geofisiche, sismiche. Dr.ssa geologa Giuseppina Antonucci. Attivo dal 1999.">
   <meta name="keywords" content="studio geologico Torremaggiore, geologa Foggia, geotecnica Puglia, indagini geofisiche Torremaggiore, geologa Torremaggiore, geologia Foggia, Antonucci geologa, indagini sismiche Puglia, MASW, CPT, georadar Foggia">
@@ -12,13 +11,11 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.studiolatessa.it/" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Studio di Geologia e Geotecnica – Dr.ssa geologa Giuseppina Antonucci">
   <meta property="og:description" content="Indagini geologiche, geotecniche e geofisiche in Puglia. Esperienza dal 1999.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
 
-  <!-- Schema.org strutturato per Google -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,7 +29,7 @@
       "addressRegion": "FG",
       "addressCountry": "IT"
     },
-    "telephone": "+390882420368",
+    "telephone": "+390882601742",
     "email": "giusyantonucci@hotmail.com",
     "url": "https://www.studiolatessa.it",
     "founder": {
@@ -58,7 +55,6 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -95,10 +91,7 @@
       position: absolute;
       bottom: 0; left: 0; right: 0;
       height: 200px;
-      background: linear-gradient(to top,
-        rgba(61,47,31,0.6) 0%,
-        rgba(140,109,79,0.2) 40%,
-        transparent 100%);
+      background: linear-gradient(to top, rgba(61,47,31,0.6) 0%, rgba(140,109,79,0.2) 40%, transparent 100%);
     }
 
     .header-content {
@@ -122,7 +115,7 @@
 
     h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-size: clamp(2.4rem, 6vw, 5.5rem);
       font-weight: 300;
       line-height: 1.05;
       color: var(--cream);
@@ -131,14 +124,11 @@
       animation: fadeUp 0.8s ease forwards 0.4s;
     }
 
-    h1 em {
-      font-style: italic;
-      color: var(--sand);
-    }
+    h1 em { font-style: italic; color: var(--sand); }
 
     .subtitle {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+      font-size: clamp(1rem, 2.5vw, 1.6rem);
       font-weight: 300;
       color: var(--clay);
       margin-bottom: 48px;
@@ -155,11 +145,7 @@
       animation: fadeUp 0.8s ease forwards 0.8s;
     }
 
-    .meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
+    .meta-item { display: flex; flex-direction: column; gap: 4px; }
 
     .meta-label {
       font-size: 0.6rem;
@@ -168,10 +154,7 @@
       color: var(--clay);
     }
 
-    .meta-value {
-      font-size: 0.85rem;
-      color: var(--sand);
-    }
+    .meta-value { font-size: 0.85rem; color: var(--sand); }
 
     .meta-value a {
       color: var(--sand);
@@ -179,7 +162,6 @@
       border-bottom: 1px solid rgba(201,169,122,0.3);
       transition: border-color 0.2s;
     }
-
     .meta-value a:hover { border-color: var(--sand); }
 
     .scroll-hint {
@@ -241,8 +223,53 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-
     .nav-links a:hover { color: var(--sand); }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      z-index: 110;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--sand);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* Mobile menu overlay */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--stone);
+      z-index: 105;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--cream);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--sand); }
 
     /* ── SECTIONS ── */
     section {
@@ -261,7 +288,6 @@
       align-items: center;
       gap: 16px;
     }
-
     .section-label::after {
       content: '';
       flex: 1;
@@ -272,19 +298,27 @@
 
     h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
       font-weight: 300;
       color: var(--earth);
       margin-bottom: 48px;
       line-height: 1.15;
     }
-
     h2 em { font-style: italic; color: var(--accent); }
 
-    /* ── SERVIZI GRID ── */
-    .services-grid {
+    /* ── SERVIZI ── */
+    .services-row-4 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      background: var(--cream);
+      border: 1px solid var(--cream);
+      margin-bottom: 2px;
+    }
+
+    .services-row-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 2px;
       background: var(--cream);
       border: 1px solid var(--cream);
@@ -307,7 +341,6 @@
       background: var(--accent);
       transition: height 0.4s ease;
     }
-
     .service-card:hover { background: #fff; }
     .service-card:hover::before { height: 100%; }
 
@@ -346,7 +379,6 @@
       padding: 16px 20px;
       transition: border-color 0.3s;
     }
-
     .tool-item:hover { border-color: var(--accent); }
 
     .tool-name {
@@ -368,65 +400,9 @@
     .strata-divider {
       width: 100%;
       height: 8px;
-      background: linear-gradient(to right,
-        var(--stone) 0%,
-        var(--earth) 20%,
-        var(--clay) 45%,
-        var(--sand) 70%,
-        var(--cream) 100%);
+      background: linear-gradient(to right, var(--stone) 0%, var(--earth) 20%, var(--clay) 45%, var(--sand) 70%, var(--cream) 100%);
       opacity: 0.4;
     }
-
-    /* ── PDF SECTION ── */
-    #brochure {
-      background: var(--stone);
-      color: var(--cream);
-      max-width: 100%;
-      padding: 80px 60px;
-    }
-
-    #brochure .section-label { color: var(--clay); }
-    #brochure h2 { color: var(--cream); max-width: 1100px; margin-left: auto; margin-right: auto; }
-    #brochure h2 em { color: var(--sand); }
-
-    .pdf-wrapper {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .pdf-container {
-      width: 100%;
-      height: 700px;
-      border: 1px solid rgba(140,109,79,0.3);
-      background: var(--earth);
-    }
-
-    .pdf-fallback {
-      display: none;
-      text-align: center;
-      padding: 60px 40px;
-      border: 1px solid rgba(140,109,79,0.3);
-    }
-
-    .pdf-fallback p {
-      font-size: 0.8rem;
-      color: var(--clay);
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 32px;
-      background: var(--accent);
-      color: #fff;
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-
-    .btn:hover { background: var(--clay); }
 
     /* ── CONTATTI ── */
     .contact-grid {
@@ -443,11 +419,7 @@
       margin-bottom: 32px;
     }
 
-    .contact-detail {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+    .contact-detail { display: flex; flex-direction: column; gap: 16px; }
 
     .contact-row {
       display: flex;
@@ -470,11 +442,7 @@
       font-size: 1.05rem;
       color: var(--earth);
     }
-
-    .contact-val a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+    .contact-val a { color: var(--accent); text-decoration: none; }
 
     .piva-box {
       background: var(--cream);
@@ -482,6 +450,26 @@
       font-size: 0.68rem;
       color: var(--clay);
       line-height: 2;
+    }
+
+    /* CTA mobile: tasto chiama */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 90;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 28px;
+      white-space: nowrap;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
 
     /* ── FOOTER ── */
@@ -497,7 +485,6 @@
       font-size: 0.65rem;
       letter-spacing: 0.1em;
     }
-
     footer a { color: var(--clay); text-decoration: none; }
 
     /* ── ANIMATIONS ── */
@@ -505,28 +492,101 @@
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes growLine {
       0%, 100% { transform: scaleX(1); }
       50% { transform: scaleX(1.5); transform-origin: left; }
     }
 
     /* ── RESPONSIVE ── */
+
+    /* Tablet: 768–1024px */
+    @media (max-width: 1024px) {
+      .services-row-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .services-row-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      /* ultima card della riga 3 su tutta la larghezza quando è sola */
+      .services-row-3 .service-card:last-child:nth-child(odd) {
+        grid-column: span 2;
+      }
+    }
+
+    /* Mobile: ≤768px */
     @media (max-width: 768px) {
-      header { min-height: auto; }
-      .header-content { padding: 60px 24px 80px; }
-      nav { padding: 0 24px; }
+      /* Header */
+      header { min-height: 100svh; }
+      .header-content { padding: 80px 24px 100px; }
+      .scroll-hint { left: 24px; bottom: 28px; }
+
+      /* Nav */
+      nav { padding: 0 20px; height: 52px; }
       .nav-links { display: none; }
-      section { padding: 60px 24px; }
-      #brochure { padding: 60px 24px; }
-      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-      .scroll-hint { left: 24px; }
-      footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
-      .pdf-container { height: 400px; }
+      .nav-toggle { display: flex; }
+      .nav-brand { font-size: 0.9rem; }
+
+      /* Header meta: stack verticale leggibile */
+      .header-meta { flex-direction: column; gap: 20px; }
+      .meta-value { font-size: 0.9rem; }
+
+      /* Sections */
+      section { padding: 60px 20px; }
+
+      /* Servizi: 1 colonna */
+      .services-row-4,
+      .services-row-3 {
+        grid-template-columns: 1fr;
+      }
+      .services-row-3 .service-card:last-child:nth-child(odd) {
+        grid-column: span 1;
+      }
+      .service-card { padding: 28px 20px; }
+      .service-title { font-size: 1.2rem; }
+
+      /* Sezione servizi: padding laterale */
+      #servizi { padding-left: 20px !important; padding-right: 20px !important; }
+
+      /* Strumentazione */
+      .tools-list { grid-template-columns: 1fr; gap: 16px; }
+
+      /* Contatti */
+      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .contact-row { flex-direction: column; gap: 4px; }
+      .contact-key { min-width: unset; }
+      .contact-val { font-size: 1.1rem; }
+
+      /* h2 più compatto */
+      h2 { margin-bottom: 32px; }
+
+      /* Footer */
+      footer {
+        padding: 32px 20px 80px; /* spazio per il CTA fisso */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      /* CTA fisso */
+      .mobile-cta { display: block; }
+    }
+
+    /* Mobile piccolo: ≤380px */
+    @media (max-width: 380px) {
+      h1 { font-size: 2rem; }
+      .eyebrow { font-size: 0.6rem; }
     }
   </style>
 </head>
 <body>
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#chi-siamo" onclick="closeMenu()">Chi siamo</a>
+  <a href="#servizi" onclick="closeMenu()">Servizi</a>
+  <a href="#strumentazione" onclick="closeMenu()">Strumentazione</a>
+  <a href="#contatti" onclick="closeMenu()">Contatti</a>
+</div>
 
 <!-- HERO -->
 <header>
@@ -534,7 +594,7 @@
   <div class="header-strata"></div>
   <div class="header-content">
     <p class="eyebrow">Studio di Geologia e Geotecnica · Dal 1999</p>
-    <h1>Dr.ssa geologa <br><em>Giuseppina Antonucci </em></h1>
+    <h1>Dr.ssa geologa <br><em>Giuseppina Antonucci</em></h1>
     <p class="subtitle">Indagini Geognostiche &amp; Geofisiche · Torremaggiore (FG)</p>
     <div class="header-meta">
       <div class="meta-item">
@@ -543,7 +603,9 @@
       </div>
       <div class="meta-item">
         <span class="meta-label">Telefono</span>
-        <span class="meta-value"><a href="tel:+390882420368">0882601742</a> · <a href="tel:+393929775853"> 320.4742182</a></span>
+        <span class="meta-value">
+          <a href="tel:+390882601742">0882601742</a> · <a href="tel:+393204742182">320.4742182</a>
+        </span>
       </div>
       <div class="meta-item">
         <span class="meta-label">Email</span>
@@ -559,13 +621,15 @@
 
 <!-- NAV STICKY -->
 <nav>
-  <span class="nav-brand"> Giuseppina Antonucci · Geologia</span>
+  <span class="nav-brand">Giuseppina Antonucci · Geologia</span>
   <ul class="nav-links">
     <li><a href="#servizi">Servizi</a></li>
     <li><a href="#strumentazione">Strumentazione</a></li>
-    <li><a href="#brochure">Brochure</a></li>
     <li><a href="#contatti">Contatti</a></li>
   </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- CHI SIAMO -->
@@ -573,7 +637,7 @@
   <p class="section-label">Chi siamo</p>
   <h2>Competenza geologica<br>al servizio del <em>territorio</em></h2>
   <p style="max-width:640px; font-size:0.82rem; line-height:2; color:var(--clay);">
-    Lo studio del Dr.ssa geologa Giuseppina Antonucci svolge attività professionale nel campo della geologia dal <strong style="color:var(--earth)">1999</strong>, acquisendo negli anni esperienze e competenze in più ambiti professionali. Si occupa della ricerca e dello studio per la conoscenza del sottosuolo nelle sue condizioni statiche e dinamiche, nella definizione della modellazione geotecnica e sismica e nelle sue trasformazioni da ante a post operam.
+    Lo studio della Dr.ssa geologa Giuseppina Antonucci svolge attività professionale nel campo della geologia dal <strong style="color:var(--earth)">1999</strong>, acquisendo negli anni esperienze e competenze in più ambiti professionali. Si occupa della ricerca e dello studio per la conoscenza del sottosuolo nelle sue condizioni statiche e dinamiche, nella definizione della modellazione geotecnica e sismica e nelle sue trasformazioni da ante a post operam.
   </p>
 </section>
 
@@ -589,7 +653,7 @@
   <div style="max-width:1100px; margin:0 auto;">
 
     <!-- Riga 1: 4 card -->
-    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:var(--cream); border:1px solid var(--cream); margin-bottom:2px;">
+    <div class="services-row-4">
       <div class="service-card">
         <p class="service-num">01</p>
         <p class="service-title">Ingegneria Civile</p>
@@ -613,7 +677,7 @@
     </div>
 
     <!-- Riga 2: 3 card -->
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--cream); border:1px solid var(--cream);">
+    <div class="services-row-3">
       <div class="service-card">
         <p class="service-num">05</p>
         <p class="service-title">Esplorazione del Sottosuolo</p>
@@ -682,11 +746,11 @@
         </div>
         <div class="contact-row">
           <span class="contact-key">Telefono</span>
-          <span class="contact-val"><a href="tel:+390882420368">0882601742</a></span>
+          <span class="contact-val"><a href="tel:+390882601742">0882601742</a></span>
         </div>
         <div class="contact-row">
           <span class="contact-key">Mobile</span>
-          <span class="contact-val"><a href="tel:+393929775853"> 320.4742182</a></span>
+          <span class="contact-val"><a href="tel:+393204742182">320.4742182</a></span>
         </div>
         <div class="contact-row">
           <span class="contact-key">Email</span>
@@ -702,7 +766,7 @@
       <div class="piva-box">
         <strong style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--earth);">Dr.ssa geologa Giuseppina Antonucci</strong><br><br>
         P.IVA 03018780712<br>
-        C.F. NTNGPP72L51I158N <br><br>
+        C.F. NTNGPP72L51I158N<br><br>
         Iscritta all'Ordine dei Geologi della Puglia<br>
         Attività professionale dal 1999
       </div>
@@ -715,6 +779,26 @@
   <span>© 2025 Dr.ssa geologa Giuseppina Antonucci — Torremaggiore (FG)</span>
   <span>P.IVA 03018780712 · <a href="mailto:giusyantonucci@hotmail.com">giusyantonucci@hotmail.com</a></span>
 </footer>
+
+<!-- CTA fisso mobile -->
+<a href="tel:+390882601742" class="mobile-cta">Chiama lo studio</a>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const toggle = document.getElementById('navToggle');
+    menu.classList.toggle('open');
+    toggle.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+  function closeMenu() {  
+    const menu = document.getElementById('mobileMenu');
+    const toggle = document.getElementById('navToggle');
+    menu.classList.remove('open');  
+    toggle.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+</script>
 
 </body>
 </html>
